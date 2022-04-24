@@ -22,11 +22,11 @@ $items = $_SESSION['cart'] ?? null;
                 </tr>
             </thead>
             <?php if (isset($items)) : ?>
-                <?php foreach ($items as $nb => $item) : ?>
+                <?php foreach ($items as $id => $nb) : ?>
                     <tr>
-                        <td><?= $catalog[$nb]['name'] ?></td>
-                        <td><?= $catalog[$nb]['description'] ?></td>
-                        <td><?= $item ?></td>
+                        <td><?= $catalog[$id]['name'] ?></td>
+                        <td><?= $catalog[$id]['description'] ?></td>
+                        <td><?= $nb ?></td>
                     </tr> <?php endforeach; ?>
             <?php endif; ?>
 
